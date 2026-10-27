@@ -1,9 +1,10 @@
 # PIA_SIMULACION
 
-📌 Plan de Proyecto: Simulación y Optimización de Portafolio
+
+## 📌 Plan de Proyecto: Simulación y Optimización de Portafolio
 
 
-🎯 Decisiones por Tomar
+## 🎯 Decisiones por Tomar
 
 1. Selección de Activos
 	• Seleccionar 10 acciones iniciales basadas en el comportamiento del mercado del S&P 100.
@@ -25,24 +26,24 @@
 8. Stack Tecnológico
 	• Pendiente: Justificar la arquitectura de herramientas elegida (¿Por qué Python para el backend/cálculo y Power BI para el frontend/visualización?).
 
-📋 Tareas por Realizar
+## 📋 Tareas por Realizar
 
 • [Espacio libre para asignar las primeras actividades del equipo]
 
-💡 Ideas Potenciales (Maybes)
+## 💡 Ideas Potenciales (Maybes)
 
 • Perfiles de Inversión: Agregar una funcionalidad para que el usuario seleccione su perfil de riesgo (Aversión al riesgo, Neutral, Propenso al riesgo/Amante).
 
-🛠️ Herramientas Utilizadas
+## 🛠️ Herramientas Utilizadas
 
 
-🐍 Python
+## 🐍 Python
 
 • Pandas: Procesamiento y manipulación de estructuras de datos.
 • NumPy: Cálculos numéricos y operaciones matriciales eficientes.
 • Matplotlib: Generación de gráficos estadísticos y de control internos.
 • yfinance: Descarga de datos financieros históricos directamente de Yahoo Finance.
 
-📊 Power BI
+## 📊 Power BI
 
 • Visualización: Creación de dashboards interactivos para la toma de decisiones y presentación del portafolio óptimo.
