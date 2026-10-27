@@ -28,7 +28,9 @@
 
 ## 📋 Tareas por Realizar
 
-• [Espacio libre para asignar las primeras actividades del equipo]
+• Hacer el cronograma.
+- Hacer el codigo de python (borrador).
+- 
 
 ## 💡 Ideas Potenciales (Maybes)
 
