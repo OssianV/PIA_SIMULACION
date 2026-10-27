@@ -49,3 +49,7 @@
 ## 📊 Power BI
 
 • Visualización: Creación de dashboards interactivos para la toma de decisiones y presentación del portafolio óptimo.
+
+## Referencias
+
+- Codigo de python de proyecto similar donde solo se simulan los pesos: https://github.com/Gouldh/Monte-Carlo-Portfolio-Optimization/blob/main/main.py
