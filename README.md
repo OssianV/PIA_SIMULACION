@@ -9,23 +9,6 @@ Usaremos una simulacion de Monte-Carlo en dos partes especificas: (1) obtener co
 
 ## 1er Entregable
 
-Para el primer entregable, necesitamos tener lo siguiente:
-
-Semana 1: Fundamentos y Planificación
-• Definición del problema
-• Justificación del sistema elegido
-• Objetivos del modelo
-• Identificación de variables, parámetros y supuestos
-• Tipo de simulación (discreta, continua, híbrida)
-• Cronograma y roles del equipo
-• Firma de integridad académica
-Semana 2: Modelo Base y Programación
-• Desarrollo del modelo conceptual
-• Implementación inicial en Python u otro lenguaje
-• Estructura del sistema (eventos, estados, procesos)
-• Documentación del código
-• Justificación del enfoque utilizado
-
 ### Roles
 
 Por el momento, se me ocurrio definir los roles de la siguiente manera:
@@ -39,30 +22,30 @@ Jimena: Implementacion en codigo (Desarrollo del codigo de python)
 ### 📝 Tareas por realizar
 
 Semana 1: Fundamentos y Planificación
-• Definición del problema (**VICTORIA**)
+- Definición del problema (**VICTORIA**)
 	- Uno o dos parrafos explicando que es lo que estamos haciendo: Que es un portafolio de inversiones? Por que es necesario optimizarlo? Cuales son los desafios iniciales de optimizarlo? Por que es necesario realizar una simulacion para hacerlo? etc.
-• Justificación del sistema elegido (**VICTORIA**)
+- Justificación del sistema elegido (**VICTORIA**)
 	- Uno o dos parrafos explicando por que usar simulacion montecarlo, etc.
-• Objetivos del modelo (**MEME**)
+- Objetivos del modelo (**MEME**)
 	- Que buscamos obtener de la simulacion? Definir claramente qué se busca resolver o demostrar con esta simulación. Uno o dos parrafos.
-• Identificación de variables, parámetros y supuestos (**MEME**)
+- Identificación de variables, parámetros y supuestos (**MEME**)
 	- El nombre lo dice claramente. Dos o tres parrafos.
-• Tipo de simulación (discreta, continua, híbrida) (**VICTORIA**)
+- Tipo de simulación (discreta, continua, híbrida) (**VICTORIA**)
 	- Un parrafo. Justificar por que una y no las otras.
-• Cronograma y roles del equipo (**OSSIAN**)
+- Cronograma y roles del equipo (**OSSIAN**)
 	- Cronograma (Diagrama de Gantt)
 	- Definicion de roles (a grandes rasgoz, que hara cada quien)
-• Firma de integridad académica
+- Firma de integridad académica
 
 Semana 2: Modelo Base y Programación
-• Desarrollo del modelo conceptual (**OSSIAN**)
-• Implementación inicial en Python u otro lenguaje (**JOLETTE**)
+- Desarrollo del modelo conceptual (**OSSIAN**)
+- Implementación inicial en Python u otro lenguaje (**JOLETTE**)
 	- Script basico que genere lo mismo que [este proyecto](https://github.com/Gouldh/Monte-Carlo-Portfolio-Optimization). La diferencia es que no vas a simular los pesos, definiras una lista de unas 20 combinaciones diferentes de pesos y desarrollaras la simulacion. Nota que entonces no simularas el comportamiento del portafolio a lo largo del 2025. Generaras una grafica usando matplotlib para mostrar resultados.
-• Estructura del sistema (eventos, estados, procesos) (**JIMENA**)
+- Estructura del sistema (eventos, estados, procesos) (**JIMENA**)
 	- Aqui tenemos que identificar todas las caracteristicas de la simulacion que vimos en clase. 
-• Documentación del código (**JOLETTE**)
+- Documentación del código (**JOLETTE**)
 	- El codigo que se genere tendra que estar documentado. Por el momento con que este bien comentado esta bien.
-• Justificación del enfoque utilizado (**JIMENA**)
+- Justificación del enfoque utilizado (**JIMENA**)
 	- PENDIENTE (No se muy bien que pide)
 
 A parte de las tareas previamente descritas, estan las decicione por tomar que siguen. Estas no se donde iran en el entregable 1, pero igual las tenemos que hacer.
