@@ -1,11 +1,82 @@
 # PIA_SIMULACION
 
+## 📌 Proyecto Elegido: Simulacion de Monte-Carlo para obtener un portafolio optimo + proyeccion de portafolios seleccionados
 
-## 📌 Proyecto Elegido: Simulacion de Monte-Carlo para obtener un portafolio optimo
+El proyecto consisitira en realizar una simulacion de Monte-Carlo para generar una lista de portafolios (generando aleatoriamente los pesos de cada activo), y aplicar metricas definidas para seleccionar el "mejor" portafolio. Usaremos 10 acciones del SYP100. Ademas, para los portafolios seleccionados, realizaremos varias proyecciones diaria de la evolucion de su rendimiento a lo largo de un año. Al final analizaremos los resultados, y acompañaremos el analisis con un dashboard en PowerBI.
 
-Vamos a utilizar una simulacion de monte-carlo para obtener el portafolio optimo en base a una lista de acciones a considerar. Lo que obtendremos seran los pesos que cada accion debe tener en nuestro portafolio.
+### Entendiendo la simulacion
 
-Usaremos una simulacion de Monte-Carlo en dos partes especificas: (1) obtener combinaciones aleatorias de pesos, y (2) simular la evolucion de los portafolios en un año. Por el momento, usaremos los precios de cierre ajustados del 2022 al 2024, y usaremos los precios de cierre del 2025 como "test". Falta determinar muchas cosas del proyecto, estas se listan en la seccion [Decisiones por Tomar](#Decisiones por Tomar).
+Para que quede claro que estamos haciendo podemos dividir el proyecto en 3. Aqui detallo cada una de las partes:
+
+1. Simulacion estandar de Markowitz: Este es el corazon de la simulacion. Existen una infinidad de combinaciones de pesos para los 10 activos que tendra nuestra portafolio. Es computacionalmente imposible computar el rendimiento y riesgo de cada uno de dichas combinaciones. Es por esto que generaremos aletoriamente las combinaciones de pesos.
+
+Para cada una de esas combinaciones, usaremos los datos historicos de precios ajustados al cierre para computar el rendimiento diario del portafolio. Posteriormente, computaremos el rendimiento esperado y el riesgo asociado al portafolio. Usando esto, calcularemos el ratio de sharpe y graficaremos la frontera eficiente de markowitz.
+
+Por ultimo, en base a nuestros criterios de seleccion del "mejor" portafolio, seleccionaremos nuestro mejor portafolio para cada criterio.
+
+2. Simulacion estocastica de mov. brow. geom. : Una vez obtenidos nuestros "mejores" portafolios, realizaremos una alta cantidad de proyecciones del precio diario de cada portafolio seleccionado a lo largo de un año (2026). Para cada portafolio haremos una grafica donde condensemos los resultados de todas las proyecciones, junto al historico real de este (pues tenemos precios de cierre hasta noviembre del 2026).
+
+Esto se llama un test de estres, y como grafica podriamos hacer algo como esto:
+
+![ejemplo_fan_chart](MISCELLANEOUS/png_jpg/)
+
+3. Analisis: Esta parte es la que ira mas detallada en el documento final. Basicamente se reduce a analizar los resultados y el dashboard obtenido.
+
+### Decisciones metodologicas por justificar
+
+En el documento final necesitaremos argumentar bien las desiciones metodologicas tomadas para la elaboracion del proyecto. Aqui listo aquellas de las que soy conciente, puede no sean todas.
+
+1. Indice ancla seleccionado.
+2. Activos seleccionados.
+3. Activo libre de riesgo seleccionado.
+4. Periodo de datos historicos seleccionado.
+5. Por que precios ajustados al cierre?
+6. Periodo de proyeccion seleccionado.
+7. Cantidad de pesos generados.
+8. Supuestos asociados al modelo de markowitz estandar.
+	- Como calcular el riesgo?
+	- Como calcular el rendimiento esperado?
+9. Supuestos asociados a la proyeccion de precios diarios
+	- Cantidad de proyecciones por portafolio.
+	- Supuestos asociados al mov. brow. geometrico (precios siguen log normal, rendimientos normal)
+	- Por que normal y no t de student?
+	- Desventajas de usar normal? (no contabiliza escenarios catastroficos)
+	- Por que los resultados de la proyecicon de mbg deberian concordar con los del modelo de markowitz.
+10. Stack tecnologico utilizado.
+
+### Requisitos del codigo
+
+Como se hara la visualizacion en PowerBI, sera necesario exportar los resultados de la simulacion hecha en Python a un archivo .csv. A continuacion detallo la estructura del output necesario para cada parte de la simulacion.
+
+Output 1: Optimizacion estandar de markowitz
+
+Este csv contiene los datos asociados a los 5000 portafolios generados.
+
+- Nombre del archivo: markowitz_optimization_results.csv
+- Columnas requeridas:
+1. Portfolio_ID (Entero del 1 al 5000)
+2. Retorno_anual_esperado (Float)
+3. Riesgo_anual (Desviacion estandar, Float)
+4. Ratio_de_sharpe (Float)
+5. Weight_AAPL (Float, representing percentage)
+6. Weight_MSFT (Float)
+> ... (Repeat for all 10 chosen stock weights)
+
+Output 2: Test de estres estocastico
+
+Este csv contiene los caminos dia a dia simulados para los portafolios optimos seleccionados
+
+- Nombre del archivo: gbm_stress_test_paths.csv
+- Columnas requeridas:
+1. Tipo_portafolio (string: "Maximo Sharpe", "Minima varianza", "Maximo retorno")
+2. Path_ID (Entero del 1 al 500)
+3. Fecha (String: mm/dd/yyyy, solo para dias donde la bolsa de NY esta abierta en el 2026)
+4. Valor_portafolio (Float, empezando en 1.0 en el dia 0)
+
+Notese que como se seleccionaran 3 portafolios y hay 252 trading days en un ano, debera haber alreadedor de 756 filas.
+
+
+# LEGACY - ESTO YA NO ES IMPORTANTE
 
 ## 1er Entregable
 
