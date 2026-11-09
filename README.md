@@ -18,7 +18,7 @@ Por ultimo, en base a nuestros criterios de seleccion del "mejor" portafolio, se
 
 Esto se llama un test de estres, y como grafica podriamos hacer algo como esto:
 
-![ejemplo_fan_chart](MISCELLANEOUS/png_jpg/)
+[ejemplo_fan_chart](MISCELLANEOUS/png_jpg/)
 
 3. Analisis: Esta parte es la que ira mas detallada en el documento final. Basicamente se reduce a analizar los resultados y el dashboard obtenido.
 
@@ -60,7 +60,7 @@ Este csv contiene los datos asociados a los 5000 portafolios generados.
 4. Ratio_de_sharpe (Float)
 5. Weight_AAPL (Float, representing percentage)
 6. Weight_MSFT (Float)
-> ... (Repeat for all 10 chosen stock weights)
+> ... (Repetir para los 10 activos)
 
 Output 2: Test de estres estocastico
 
