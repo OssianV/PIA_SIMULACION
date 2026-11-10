@@ -54,7 +54,7 @@ Este csv contiene los datos asociados a los 5000 portafolios generados.
 
 - Nombre del archivo: markowitz_optimization_results.csv
 - Columnas requeridas:
-1. Portfolio_ID (Entero del 1 al 5000)
+1. Portfolio_ID (Entero del 1 al 5000) - Primary Key
 2. Retorno_anual_esperado (Float)
 3. Riesgo_anual (Desviacion estandar, Float)
 4. Ratio_de_sharpe (Float)
@@ -68,13 +68,13 @@ Este csv contiene los caminos dia a dia simulados para los portafolios optimos s
 
 - Nombre del archivo: gbm_stress_test_paths.csv
 - Columnas requeridas:
-1. Tipo_portafolio (string: "Maximo Sharpe", "Minima varianza", "Maximo retorno")
-2. Path_ID (Entero del 1 al 500)
-3. Fecha (String: mm/dd/yyyy, solo para dias donde la bolsa de NY esta abierta en el 2026)
-4. Valor_portafolio (Float, empezando en 1.0 en el dia 0)
+1. Portfolio_ID (Entero del 1 al 5000) - Primary Key
+2. Tipo_portafolio (string: "Maximo Sharpe", "Minima varianza", "Maximo retorno")
+3. Path_ID (Entero del 1 al 500)
+4. Fecha (String: mm/dd/yyyy, solo para dias donde la bolsa de NY esta abierta en el 2026)
+5. Valor_portafolio (Float, empezando en 1.0 en el dia 0)
 
 Notese que como se seleccionaran 3 portafolios y hay 252 trading days en un ano, debera haber alreadedor de 756 filas.
-
 
 # LEGACY - ESTO YA NO ES IMPORTANTE
 
